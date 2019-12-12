@@ -35,16 +35,17 @@ int main(){
 		printf("\nInforme um número: ");
 		scanf("%d",&number);
 		t1.qD++;
-		switch(verifica(number)){
-				case 0:	t1.qNL++;
-						break;
-				case 1:	t1.qDIM++;
-						break;
-				case 2: t1.qDIN++;
-						break;
+		if(number > -1){
+			switch(verifica(number)){
+					case 0:	t1.qNL++;
+							break;
+					case 1:	t1.qDIM++;
+							break;
+					case 2: t1.qDIN++;
+							break;
+			}
+			printf("\n\nCaractere ASCII ao %d: %c",number,number);
 		}
-		printf("\n\nCaractere ASCII ao %d: %c",number,number);
-		
 	}while(number > -1);
 	printf("\nQuantidade números digitados: %d",t1.qD);
 	printf("\nQuantidade de números digitados dentro do intervalo de letras maiúsculas: %d",t1.qDIM);
